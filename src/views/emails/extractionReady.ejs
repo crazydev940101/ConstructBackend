@@ -1,0 +1,56 @@
+<%- include('./templates/header') %>
+<p><b>Your document data has been extracted</b></p>
+<p style="padding-top: 30px;padding-bottom: 20px;">Your data is now ready to be analysed give you time and cost
+  saving insights, enjoy digging!</p>
+<div>
+  <!-- <p style="font-size: 21px;">Download your Model Now.</p>
+  <p><b><a href="<-%= downloadLink %>" style="text-decoration: underline;color:#054ebb;font-size: 14px;">Download my first results
+        (.csv, .xml)</a></b></p> -->
+  <!-- <span style="min-width:200px;max-width: 450px;display: block;">
+    <img src="img.png" alt="img" style="width:-webkit-fill-available">
+  </span> -->
+  <p>You can do this directly on the Airdoc.Pro app as well</p>
+  <a href="<%= extractionPageLink %>" type="button" style="
+                          padding: 10px 20px;
+                          max-width: 125px;
+                          display: block;
+                          text-align: center;
+                          text-decoration: none;
+                          background-color: #054ebb;
+                          border-radius: 3px;
+                          font-size: 14px;
+                          border-color: #054ebb;color:white;">
+    Go to Project
+  </a>
+  <p style="border-bottom-style: inset;
+                  border-bottom-color: #e0e0e0;
+                  border-bottom-width: 4px;">
+  </p>
+  <p>
+    This message is only visible to you and was only generated the first time you uploaded files to test a data
+    extractor.
+  </p>
+  <p style="border-bottom-style: inset;
+                  border-bottom-color: #e0e0e0;
+                  border-bottom-width: 4px;">
+  </p>
+  <a href="<%= newExtractionPageLink %>" style="text-decoration: none;color:black"><b>Extract another document here</b></a>
+  <p style="border-bottom-style: inset;
+                  border-bottom-color: #e0e0e0;
+                  border-bottom-width: 4px;">
+  </p>
+  <p>
+    Speak to an expert! If you or someone from your team needs more help with this,
+    we'd be happy to help you out over a video call.
+    Schedule time to talk with a Airdoc.Pro expert: <a href="<%= meetingLink %>" style="text-decoration: none;color:black"></a><%= meetingLink %></a>
+  </p>
+  <p style="border-bottom-style: inset;
+                  border-bottom-color: #e0e0e0;
+                  border-bottom-width: 4px;">
+  </p>
+  <a href="<%= newsletterLink %>" style="text-decoration: none;color:black">
+    <b>
+      See how others are using Airdoc.Pro, sign up to our newsletter here.
+    </b>
+  </a>
+  <%- include('./templates/footer') %>

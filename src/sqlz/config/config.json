@@ -1,0 +1,31 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "1qazxsw2!QAZXSW@",
+    "database": "airdocpro_dev",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres",
+    "logging": false,
+    "force": true,
+    "timezone": "+00:00"
+  },
+
+  "production": {
+    "username": "iilzbyvscm",
+    "password": "P4uxUz5NsPXB87L",
+    "database": "airdocpro-test-database",
+    "host": "airdocpro-test-server.postgres.database.azure.com",
+    "port": 5432,
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    },
+    "logging": false,
+    "force": true,
+    "timezone": "+00:00"
+  }
+}

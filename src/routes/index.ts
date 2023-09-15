@@ -1,0 +1,45 @@
+import express from "express";
+import { isAuthenticated, onlySystemAdmin } from "../middlewares";
+import UserAuthRouter from "./userAuth.router";
+import UserRouter from "./user.router";
+import UtilsRouter from "./utils.router";
+import ExtractModelRouter from "./extractModel.router";
+import ProjectRouter from "./project.router";
+import ExtractDataRouter from "./extractData.router";
+import ConstantsRouter from "./constants.router";
+import StripeRouter from "./stripe.router";
+import ChatbotRouter from "./chatbot.router";
+import SubscriptionRouter from "./subscriptionPlan.router";
+import UserSettingRouter from "./userSetting.router";
+import SupportRequestRouter from "./supportRequest.router";
+import SaleRequestRouter from "./saleRequest.router";
+import ContactRequestRouter from "./contactRequest.router";
+import NewsletterRouter from "./newsletter.router";
+import SearchRouter from "./search.router";
+import SettingRouter from "./systemSetting.router";
+import PromptRouter from "./openaiPrompt.router";
+import CEFactorRouter from "./ceFactor.router";
+
+const router = express.Router();
+
+router.use("/auth/user", UserAuthRouter);
+router.use("/user", UserRouter);
+router.use("/utils", UtilsRouter);
+router.use("/extract-model", ExtractModelRouter);
+router.use("/project", ProjectRouter);
+router.use("/document", ExtractDataRouter);
+router.use("/constants", ConstantsRouter);
+router.use("/stripe", StripeRouter);
+router.use("/chatbot", isAuthenticated, ChatbotRouter);
+router.use("/subscription", SubscriptionRouter);
+router.use("/user-setting", UserSettingRouter);
+router.use("/support-request", SupportRequestRouter);
+router.use("/sale-request", SaleRequestRouter);
+router.use("/contact-request", ContactRequestRouter);
+router.use("/newsletter", NewsletterRouter);
+router.use("/search", SearchRouter);
+router.use("/setting", isAuthenticated, onlySystemAdmin, SettingRouter);
+router.use("/prompt", isAuthenticated, onlySystemAdmin, PromptRouter);
+router.use("/ce-factor", isAuthenticated, onlySystemAdmin, CEFactorRouter);
+
+export default router;

@@ -1,2 +1,2 @@
-# ConstructBackend
-This is backend application for Constructing Business
+# express-swagger-starter-kit
+Express Typescript Swagger Backend API Starter Kit
